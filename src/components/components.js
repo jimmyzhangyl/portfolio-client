@@ -1,0 +1,10 @@
+export { default as Navigation } from "./Routes/Navigation";
+export { default as Footer } from "./Routes/Footer";
+export { default as About } from "./Routes/About";
+export { default as Skills } from "./Routes/Skills";
+export { default as Projects } from "./Routes/Projects";
+export { default as Contact } from "./Routes/Contact";
+export { default as Page } from "./Page/Page";
+export { default as Timeline } from "./Timeline/Timeline";
+export { default as SkillSearch } from "./SkillSearch/SkillSearch";
+export { default as Mailer } from "./Mailer/Mailer";

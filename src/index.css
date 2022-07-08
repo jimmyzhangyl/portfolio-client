@@ -7,6 +7,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.nav-font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+  font-family: 'Edu NSW ACT Foundation', cursive;
+}
+
+h2, h3, h4, h5 {
+  font-family: 'Dancing Script', cursive;
+}
+
+p{
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
