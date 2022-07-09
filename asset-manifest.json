@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.d1d80966.css",
-    "main.js": "/static/js/main.60d39c8f.js",
-    "static/media/bot.jpg": "/static/media/bot.c70946ff919095f2efd8.jpg",
-    "static/media/Header.jpg": "/static/media/Header.ff2f89228ab9b795cc17.jpg",
-    "static/media/top.jpg": "/static/media/top.f6f74ca8fb8a2bd6f0f8.jpg",
-    "static/media/Gap_year.jpg": "/static/media/Gap_year.e43170f29759df18fd6e.jpg",
-    "static/media/Footer.jpg": "/static/media/Footer.0729019b2d0e704e1515.jpg",
-    "static/media/UniMelb.jpg": "/static/media/UniMelb.8152d14d197762c47750.jpg",
-    "static/media/Zhenjiang_Jinshan.jpg": "/static/media/Zhenjiang_Jinshan.fe77c76d737caea9583c.jpg",
-    "static/media/YLZ_logo.png": "/static/media/YLZ_logo.7b001708b0c941098b9f.png",
-    "static/media/SearchBar.jpg": "/static/media/SearchBar.9e9b194749a20f1223e7.jpg",
-    "static/media/Doge.jpg": "/static/media/Doge.744d7de315c830b6da37.jpg",
-    "static/media/NanJing_FLS_XianlingCampus.jpg": "/static/media/NanJing_FLS_XianlingCampus.2bd7abb5d38b5654f898.jpg",
-    "index.html": "/index.html",
-    "main.d1d80966.css.map": "/static/css/main.d1d80966.css.map",
-    "main.60d39c8f.js.map": "/static/js/main.60d39c8f.js.map"
+    "main.css": "/portfolio-client/static/css/main.9013ed9b.css",
+    "main.js": "/portfolio-client/static/js/main.15c3bebf.js",
+    "static/media/bot.jpg": "/portfolio-client/static/media/bot.c70946ff919095f2efd8.jpg",
+    "static/media/Header.jpg": "/portfolio-client/static/media/Header.ff2f89228ab9b795cc17.jpg",
+    "static/media/top.jpg": "/portfolio-client/static/media/top.f6f74ca8fb8a2bd6f0f8.jpg",
+    "static/media/Gap_year.jpg": "/portfolio-client/static/media/Gap_year.e43170f29759df18fd6e.jpg",
+    "static/media/Footer.jpg": "/portfolio-client/static/media/Footer.0729019b2d0e704e1515.jpg",
+    "static/media/UniMelb.jpg": "/portfolio-client/static/media/UniMelb.8152d14d197762c47750.jpg",
+    "static/media/Zhenjiang_Jinshan.jpg": "/portfolio-client/static/media/Zhenjiang_Jinshan.fe77c76d737caea9583c.jpg",
+    "static/media/YLZ_logo.png": "/portfolio-client/static/media/YLZ_logo.7b001708b0c941098b9f.png",
+    "static/media/SearchBar.jpg": "/portfolio-client/static/media/SearchBar.9e9b194749a20f1223e7.jpg",
+    "static/media/Doge.jpg": "/portfolio-client/static/media/Doge.744d7de315c830b6da37.jpg",
+    "static/media/NanJing_FLS_XianlingCampus.jpg": "/portfolio-client/static/media/NanJing_FLS_XianlingCampus.2bd7abb5d38b5654f898.jpg",
+    "index.html": "/portfolio-client/index.html",
+    "main.9013ed9b.css.map": "/portfolio-client/static/css/main.9013ed9b.css.map",
+    "main.15c3bebf.js.map": "/portfolio-client/static/js/main.15c3bebf.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1d80966.css",
-    "static/js/main.60d39c8f.js"
+    "static/css/main.9013ed9b.css",
+    "static/js/main.15c3bebf.js"
   ]
 }
