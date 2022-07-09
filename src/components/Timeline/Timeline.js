@@ -6,13 +6,15 @@ import Accordion from "react-bootstrap/esm/Accordion";
 export default class Timeline extends React.Component {
     constructor() {
         super();
+        this.server = process.env.REACT_APP_DEPLOY
+            ? process.env.REACT_APP_HEROKU_SERVER : process.env.REACT_APP_LOCAL_SERVER;
         this.state = {
             timelines: {}
         }
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/timeline')
+        fetch(`${this.server}/timeline`)
             .then(res => res.json())
             .then(data => {
                 var result = this.state.timelines;
@@ -38,9 +40,9 @@ export default class Timeline extends React.Component {
                             return <li key={timeline.timeline_name}
                                 class={count++ % 2 ? "timeline-inverted" : ""} >
                                 <div className="timeline-image">
-                                    <img className="rounded-circle img-fluid rect-img m-auto" 
-                                    alt="..." 
-                                    src={require(`../../img/timeLine/${timeline.timeline_img}`)}
+                                    <img className="rounded-circle img-fluid rect-img m-auto"
+                                        alt="..."
+                                        src={require(`../../img/timeLine/${timeline.timeline_img}`)}
                                     />
                                 </div>
                                 <div className="timeline-panel">
@@ -60,7 +62,7 @@ export default class Timeline extends React.Component {
                                 </div>
                             </li>
                         })
-                        : <h1>Loading failed</h1>}
+                        : <h1>Loading...</h1>}
                 </ul>
             </Container>
         )

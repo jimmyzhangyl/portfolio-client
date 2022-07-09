@@ -6,6 +6,8 @@ import Container from "react-bootstrap/esm/Container";
 export default class SkillFilter extends React.Component {
     constructor(props) {
         super(props);
+        this.server = process.env.REACT_APP_DEPLOY
+            ? process.env.REACT_APP_HEROKU_SERVER : process.env.REACT_APP_LOCAL_SERVER;
         this.state = {
             buttons: [],
             filter: [],
@@ -16,7 +18,7 @@ export default class SkillFilter extends React.Component {
 
     componentDidMount() {
         var tagList = this.state.buttons;
-        fetch(`http://localhost:3000/skillSearch/tags`)
+        fetch(`${this.server}/skillSearch/tags`)
             .then(res => res.json())
             .then(data => {
                 data.tags.forEach(tag => {
@@ -69,7 +71,7 @@ export default class SkillFilter extends React.Component {
                                         </>
                                     )
                                 })
-                                : ""
+                                : <p>Loading...</p>
                             }
                         </Container>
                     </Offcanvas.Body>

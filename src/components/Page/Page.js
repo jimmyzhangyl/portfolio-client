@@ -9,6 +9,8 @@ import rehypeRaw from "rehype-raw";
 export default class Page extends React.Component {
     constructor(props) {
         super(props);
+        this.server = process.env.REACT_APP_DEPLOY
+            ? process.env.REACT_APP_HEROKU_SERVER : process.env.REACT_APP_LOCAL_SERVER;
         this.collection = props.collection;
         this.name = props.name;
         this.isCard = props.isCard;
@@ -30,7 +32,8 @@ export default class Page extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:3000/page?collection=${this.collection}&name=${this.name}`)
+        console.log(`${this.server}/page?collection=${this.collection}&name=${this.name}`);
+        fetch(`${this.server}/page?collection=${this.collection}&name=${this.name}`)
             .then(res => res.json())
             .then(data => {
                 switch (this.collection) {
@@ -81,7 +84,7 @@ export default class Page extends React.Component {
                         this.getProjectCards()
                     )
                 } else {
-                    return (<ReactMarkdown children={this.state.project.body} 
+                    return (<ReactMarkdown children={this.state.project.body}
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]} />);
                 }

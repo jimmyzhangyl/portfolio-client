@@ -7,6 +7,8 @@ import Modal from "react-bootstrap/esm/Modal";
 export default class Contact extends React.Component {
     constructor() {
         super();
+        this.server = process.env.REACT_APP_DEPLOY
+                ? process.env.REACT_APP_HEROKU_SERVER : process.env.REACT_APP_LOCAL_SERVER;
         this.state = {
             name: '',
             email: '',
@@ -42,7 +44,7 @@ export default class Contact extends React.Component {
             event.stopPropagation();
         } else {
             //calling API to deep check email 
-            fetch(`http://localhost:3000/mailer/check?email=${this.state.email}`)
+            fetch(`${this.server}/mailer/check?email=${this.state.email}`)
                 .then(res => res.json())
                 .then(checkEmail => {
                     if (checkEmail.isValid) {
@@ -66,7 +68,7 @@ export default class Contact extends React.Component {
                 message: this.state.message
             })
         };
-        fetch('http://localhost:3000/mailer', contactForm)
+        fetch(`${this.server}/mailer`, contactForm)
             // .then(response => response.json())
             .then((res) => {
                 if (res.ok) {

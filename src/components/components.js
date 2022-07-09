@@ -3,6 +3,7 @@ export { default as Footer } from "./Routes/Footer";
 export { default as About } from "./Routes/About";
 export { default as Skills } from "./Routes/Skills";
 export { default as Projects } from "./Routes/Projects";
+export { default as ProjectPage } from "./ProjectPage/ProjectPage";
 export { default as Contact } from "./Routes/Contact";
 export { default as Page } from "./Page/Page";
 export { default as Timeline } from "./Timeline/Timeline";

@@ -8,6 +8,8 @@ import SkillFilter from "./SkillFilter/SkillFilter";
 export default class SkillSearch extends React.Component {
     constructor(props) {
         super(props);
+        this.server = process.env.REACT_APP_DEPLOY
+            ? process.env.REACT_APP_HEROKU_SERVER : process.env.REACT_APP_LOCAL_SERVER;
         this.state = {
             search: "",
             filter: ""
@@ -23,7 +25,7 @@ export default class SkillSearch extends React.Component {
     }
 
     handleSubmit = () => {
-        fetch(`http://localhost:3000/skillSearch?item=${this.state.search}&filters=${this.state.filter}`)
+        fetch(`${this.server}/skillSearch?item=${this.state.search}&filters=${this.state.filter}`)
             .then(response => response.json())
             //the returned search data need to be rechecked
             .then(result => {
@@ -44,7 +46,7 @@ export default class SkillSearch extends React.Component {
                         Search</Button>
                 </Col>
                 <Col className="col-md-auto">
-                    <SkillFilter collector={this.collectFillterItem}/>
+                    <SkillFilter collector={this.collectFillterItem} />
                 </Col>
             </Row>
         )

@@ -1,14 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import {
-  Navigation,
-  Footer,
-  About,
-  Skills,
-  Projects,
-  Contact,
-} from "../components";
-import ProjectPage from '../ProjectPage/ProjectPage';
+import { Navigation, Footer, About, Skills, Projects, Contact, ProjectPage } from "../components";
+
 
 function App() {
   return (

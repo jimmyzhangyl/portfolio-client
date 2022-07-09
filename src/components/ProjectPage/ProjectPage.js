@@ -14,6 +14,8 @@ export default function ProjectPage() {
 class Project extends React.Component {
     constructor(props) {
         super(props);
+        this.server = process.env.REACT_APP_DEPLOY
+                ? process.env.REACT_APP_HEROKU_SERVER : process.env.REACT_APP_LOCAL_SERVER;
         this.project = props.project;
         this.state = {
             future: "",
@@ -24,7 +26,7 @@ class Project extends React.Component {
 
     componentDidMount() {
         if (this.project === "index") {
-            fetch("http://localhost:3000/projects")
+            fetch(`${this.server}/projects`)
                 .then(result => result.json())
                 .then(data => {
                     this.setState({
