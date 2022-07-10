@@ -6,7 +6,8 @@ import { Navigation, Footer, About, Skills, Projects, Contact, ProjectPage } fro
 
 
 function App() {
-  const root = process.env.REACT_APP_ROOT;
+  // const root = process.env.REACT_APP_ROOT;
+  const root = "";
   useEffect(() => {
     document.title = "YL-Z Portfolio"
   }, []);
@@ -15,14 +16,14 @@ function App() {
     <BrowserRouter>
       <Navigation />
       <Routes>
-        <Route path={`/${root}/`} element={<About />} />
-        <Route path={`/${root}/home`} element={<About />} />
-        <Route path={`/${root}/about`} element={<About />} />
-        <Route path={`/${root}/skills`} element={<Skills />} />
-        <Route path={`/${root}/projects`} element={<Projects />}>
+        <Route path={`${root}/`} element={<About />} />
+        <Route path={`${root}/home`} element={<About />} />
+        <Route path={`${root}/about`} element={<About />} />
+        <Route path={`${root}/skills`} element={<Skills />} />
+        <Route path={`${root}/projects`} element={<Projects />}>
           <Route path=":project" element={<ProjectPage />} />
         </Route>
-        <Route path={`/${root}/contact`} element={<Contact />} />
+        <Route path={`${root}/contact`} element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>
