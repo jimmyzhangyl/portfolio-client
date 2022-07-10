@@ -6,8 +6,7 @@ import { Navigation, Footer, About, Skills, Projects, Contact, ProjectPage } fro
 
 
 function App() {
-  // const root = process.env.REACT_APP_ROOT;
-  const root = "";
+  const root = process.env.REACT_APP_ROOT;
   useEffect(() => {
     document.title = "YL-Z Portfolio"
   }, []);
