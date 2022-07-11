@@ -16,6 +16,10 @@ export default class SkillSearch extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.handleSubmit();
+    }
+
     collectFillterItem = (result) => {
         this.setState({ filter: result });
     }

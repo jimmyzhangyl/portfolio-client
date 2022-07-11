@@ -32,7 +32,6 @@ export default class Page extends React.Component {
     }
 
     componentDidMount() {
-        console.log(`${this.server}/page?collection=${this.collection}&name=${this.name}`);
         fetch(`${this.server}/page?collection=${this.collection}&name=${this.name}`)
             .then(res => res.json())
             .then(data => {
