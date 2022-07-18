@@ -72,7 +72,10 @@ export default class Page extends React.Component {
     render() {
         switch (this.collection) {
             case "pages":
-                return (<ReactMarkdown children={this.state.page.content} rehypePlugins={[rehypeRaw]} />)
+                return (<ReactMarkdown children={this.state.page.content} rehypePlugins={[rehypeRaw]}
+                    components={{
+                        img: ({ node, ...props }) => <img className="img-fluid" {...props} />
+                    }} />)
             case "skills":
                 return (
                     this.getSkillCards()
